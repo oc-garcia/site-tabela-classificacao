@@ -54,4 +54,13 @@
     border: solid 1px white;
     color: white;
   }
-  
+
+  .formulario {
+    display: block;
+    margin: 5em auto;
+    color: white;
+  }
+
+  button {
+
+  }
