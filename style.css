@@ -61,6 +61,20 @@
     color: white;
   }
 
-  button {
+  #inseriJogador {
+    width: 20%;
+  }
 
+  button {
+    border-radius: 5px;
+  }
+
+  #botaoInseri {
+    scale: 1.2;
+  }
+
+  button:hover {
+    scale: 1.4;
+    transition-duration: 1s;
+    cursor: pointer;
   }
