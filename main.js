@@ -1,15 +1,23 @@
-var rafa = {nome:"Rafa", vitorias:0, empates:0, derrotas:0, pontos:0};
-var paulo = {nome:"Paulo", vitorias:0, empates:0, derrotas:0, pontos:0};
+function adicionarJogador() {
+    var nome = document.getElementById("inseriJogador");
+    jogadores.push({
+      nome: nome.value,
+      vitorias: 0,
+      empates: 0,
+      derrotas: 0,
+      pontos: 0
+    });
+
+    nome.value = "";
+  exibeJogadoresNaTela(jogadores);
+}
 
 function calculaPontos(jogador) {
     var pontos = (jogador.vitorias *3)+ jogador.empates;
     return pontos;
 }
 
-rafa.pontos = calculaPontos(rafa);
-paulo.pontos = calculaPontos(paulo);
-
-var jogadores =[rafa, paulo];
+var jogadores =[];
 
 function exibeJogadoresNaTela(jogadores){
     var elemento = "";
@@ -32,6 +40,9 @@ function exibeJogadoresNaTela(jogadores){
     var tabelaJogadores = document.getElementById("tabelaJogadores");
 
     tabelaJogadores.innerHTML = elemento;
+
+    var novoJogador = document.getElementById("jogador");
+  novoJogador.innerText = elemento;
 
 }
 
@@ -65,3 +76,4 @@ function resetaPontos(i) {
     jogador.pontos = calculaPontos(jogador)
     exibeJogadoresNaTela(jogadores)
 }
+
